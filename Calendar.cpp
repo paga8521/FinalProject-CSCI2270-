@@ -37,7 +37,8 @@ int Calendar::recommendTime(int day){
     }
     cout<<endl<<"Please enter a time that is not taken, or enter -1 to cancel."<<endl;
     int t;
-    while (!(cin>>t) || t < 0 || t > 23){
+    // Adjusted the conditional so that the cancel function would work
+    while (!(cin>>t) || t < -1 || t > 23){
         cout<<"Error - Please enter an integer between 0 and 23 that is not on taken or -1 to cancel."<<endl;
         cin.clear();
         cin.ignore(100, '\n');
@@ -51,12 +52,14 @@ int Calendar::recommendTime(int day){
             break;
         }
     }
-    while (t < 0 || t > 23){
+    // Adjusted the conditional so that the cancel functionality would work
+    while (t < -1 || t > 23){
         if (t == -1){
             return t;
         }
         cout<<"Error - Please enter an integer between 0 and 23 that is not on taken or -1 to cancel."<<endl;
-        while (!(cin>>t) || t < 0 || t > 23){
+        // Adjusted conditional so functionality would work
+        while (!(cin>>t) || t < -2 || t > 23){
             cout<<"Error - Please enter an integer between 0 and 23 that is not on taken or -1 to cancel."<<endl;
             cin.clear();
             cin.ignore(100, '\n');

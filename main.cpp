@@ -120,7 +120,8 @@ int main()
                         string name;
                         cout << "Enter day of the week (e.g. Monday, Tuesday...): ";
                         cin>>name;
-                        while (name != "Monday" && name != "Tuesday" && name != "Wedneday" && name != "Thursday" && name != "Friday" && name != "Saturday" && name != "Sunday"){
+                        // Fixed typo in Wednesday
+                        while (name != "Monday" && name != "Tuesday" && name != "Wednesday" && name != "Thursday" && name != "Friday" && name != "Saturday" && name != "Sunday"){
                             cin.clear();
                             cin.ignore(100, '\n');
                             cout<<"Error - Please enter a day of the week: ";
